@@ -1,12 +1,12 @@
-# TWRP tree for Redmi Note 3 (kenzo)
+# TWRP device tree for Redmi Note 3 (_kenzo_)
 
-To build TWRP:
---------------
+To build:
 
+```
+. build/envsetup.sh
+lunch omni_kenzo-userdebug
+make installclean
+make recoveryimage -j(# of cores)
+```
 
-    . build/envsetup.sh
-    lunch (devicename)
-    make installclean
-    time make recoveryimage showcommands
-
-XDA Thread: [Click Here](http://forum.xda-developers.com/redmi-note-3/development/official-twrp-3-0-2-0-recovery-redmi-t3352966)
+Kernel source: https://github.com/LineageOS/android_kernel_wingtech_msm8916
