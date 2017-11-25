@@ -1,8 +1,0 @@
-on property:ro.product.cert=MDI6
-    setprop ro.product.model Redmi Y1 Lite
-
-on property:ro.product.cert=MDG6
-    setprop ro.product.model Redmi Note 5A
-
-on property:ro.product.cert=MDE6
-    setprop ro.product.model Redmi Note 5A
