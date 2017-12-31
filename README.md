@@ -1,6 +1,6 @@
 # Device Tree for Xiaomi Redmi 5 Plus (vince)
 
-or building TWRP for Xiaomi Redmi 5 Plus (vince) ONLY
+For building TWRP for Xiaomi Redmi 5 Plus (vince) ONLY
 
 To compile
 
