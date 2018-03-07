@@ -2,15 +2,16 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-# Mount point    FStype            Device                                   Flags
-/boot            emmc             /dev/block/bootdevice/by-name/boot       flags=display="Boot"
-/system          ext4             /dev/block/bootdevice/by-name/system     flags=display="System"
+# Mount point    FStype            Device                                    Flags
+/boot            emmc             /dev/block/bootdevice/by-name/boot        flags=display="Boot";flashimg
+/system          ext4             /dev/block/bootdevice/by-name/system      flags=display="System";flashimg
 /data            ext4             /dev/block/bootdevice/by-name/userdata
 /misc            emmc             /dev/block/bootdevice/by-name/misc
 /cache           ext4             /dev/block/bootdevice/by-name/cache
-/recovery        emmc             /dev/block/bootdevice/by-name/recovery  	flags=backup=1
-/cust            ext4             /dev/block/bootdevice/by-name/cust  	
-/efs1            emmc             /dev/block/bootdevice/by-name/modemst1    flags=backup=1;display=EFS
+/recovery        emmc             /dev/block/bootdevice/by-name/recovery  	flags=backup=1;display="Recovery";flashimg
+/cust            ext4             /dev/block/bootdevice/by-name/cust
+/firmware        vfat             /dev/block/bootdevice/by-name/modem       flags=backup=1;display="Modem";flashimg
+/efs1            emmc             /dev/block/bootdevice/by-name/modemst1    flags=backup=1;display="EFS"
 /efs2            emmc             /dev/block/bootdevice/by-name/modemst2    flags=backup=1;subpartitionof=/efs1
 
 /usb-otg         auto             /devices/soc/7000000.ssusb/7000000.dwc3/xhci-hcd.0.auto*     flags=display="USB-OTG";storage;wipeingui;removable
