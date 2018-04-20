@@ -1,0 +1,30 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+/system         ext4      /dev/block/bootdevice/by-name/system               flags=display="System"
+/system_image   emmc      /dev/block/bootdevice/by-name/system               flags=backup=1;flashimg=1
+/data           ext4      /dev/block/bootdevice/by-name/userdata             flags=length=-16384
+/cache          ext4      /dev/block/bootdevice/by-name/cache                flags=display="Cache"
+/cust           ext4      /dev/block/bootdevice/by-name/cust                 flags=display="Cust";backup=1
+/recovery       emmc      /dev/block/bootdevice/by-name/recovery             flags=display="Recovery";backup=1
+/boot           emmc      /dev/block/bootdevice/by-name/boot                 flags=display="Boot"
+/misc           emmc      /dev/block/bootdevice/by-name/misc                 flags=display="Misc"
+/efs1           emmc      /dev/block/bootdevice/by-name/modemst1             flags=display="EFS";backup=1
+/efs2           emmc      /dev/block/bootdevice/by-name/modemst2             flags=backup=1;subpartitionof=/efs1
+/firmware       vfat      /dev/block/bootdevice/by-name/modem                flags=backup=1;display=MODEM;mounttodecrypt;fsflags="rw,shortname=lower,uid=1000,gid=1026,dmask=227,fmask=337,context=u:object_r:firmware_file:s0"
+/persist        ext4      /dev/block/bootdevice/by-name/persist              flags=display="Persist";backup=1
+/sdcard1        auto      /dev/block/mmcblk1p1                               flags=display="MicroSD";storage;wipeingui;removable
+/usb-otg        auto      /dev/block/sda1                                    flags=display="USB Storage";storage;wipeingui;removable
+/splash         emmc      /dev/block/bootdevice/by-name/splash               flags=display="Boot Logo";backup=1;flashimg=1
+/aboot          emmc      /dev/block/bootdevice/by-name/aboot                flags=backup=1;display="Bootloader"
+/cmnlib         emmc      /dev/block/bootdevice/by-name/cmnlib               flags=backup=1;subpartitionof=/aboot
+/cmnlib64       emmc      /dev/block/bootdevice/by-name/cmnlib64             flags=backup=1;subpartitionof=/aboot
+/tz             emmc      /dev/block/bootdevice/by-name/tz                   flags=backup=1;subpartitionof=/aboot
+/dsp            emmc      /dev/block/bootdevice/by-name/dsp                  flags=backup=1;subpartitionof=/aboot
+/sbl1           emmc      /dev/block/bootdevice/by-name/sbl1                 flags=backup=1;subpartitionof=/aboot
+/rpm            emmc      /dev/block/bootdevice/by-name/rpm                  flags=backup=1;subpartitionof=/aboot
+/sec            emmc      /dev/block/bootdevice/by-name/sec                  flags=backup=1;subpartitionof=/aboot
+/mdtp           emmc      /dev/block/bootdevice/by-name/mdtp                 flags=backup=1;subpartitionof=/aboot
+/keymaster      emmc      /dev/block/bootdevice/by-name/keymaster            flags=backup=1;subpartitionof=/aboot
+/devcfg         emmc      /dev/block/bootdevice/by-name/devcfg               flags=backup=1;subpartitionof=/aboot
