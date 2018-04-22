@@ -5,7 +5,7 @@
 -----------------------------------------------------------------------
 
 
-Device configuration for Xiaomi Redmi 4[IN]/4X  (_santoni_)
+ Xiaomi Redmi 4/4X  (_santoni_)
 =====================================================
 
 Basic   | Spec Sheet
