@@ -22,3 +22,9 @@ on boot
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
+    
+
+# Fix for partition Mounting
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
