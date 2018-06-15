@@ -76,3 +76,12 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_INIT_VENDOR_LIB := libinit_kenzo
 TARGET_RECOVERY_DEVICE_MODULES := libinit_kenzo
 TARGET_UNIFIED_DEVICE := true
+
+# exFAT FS Support
+TW_INCLUDE_FUSE_EXFAT := true
+
+# NTFS Support
+TW_INCLUDE_FUSE_NTFS := true
+
+#Official
+PB_OFFICIAL := true
