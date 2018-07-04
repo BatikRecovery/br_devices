@@ -1,8 +1,5 @@
 # Device Tree for Xiaomi Redmi 5 Plus (vince)
 
-Device configuration for Xiaomi Redmi 5 Plus (vince)
-=====================================
-
 To compile
 
 . build/envsetup.sh && lunch omni_vince-userdebug && make -j8 recoveryimage
