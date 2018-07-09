@@ -59,7 +59,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/vince
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 else
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/zImage-dtb
-#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/zImage-twrp-dtb
 PRODUCT_COPY_FILES += \
     $(TARGET_PREBUILT_KERNEL):kernel
 endif
