@@ -37,7 +37,7 @@ on fs
     write /sys/class/android_usb/android0/functions mtp,adb
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
     write /sys/class/android_usb/android0/iProduct ${ro.product.model}
-    write /sys/class/android_usb/android0/iSerial Orange_Fox_(${ro.serialno})
+    write /sys/class/android_usb/android0/iSerial OrangeFox_(${ro.serialno})
 
     setprop sys.usb.config ${persist.sys.usb.config}
 
