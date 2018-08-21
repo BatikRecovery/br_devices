@@ -46,14 +46,31 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci
+
+#BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive
+
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 
 # DJ9
-FOX_BUILD_FULL_KERNEL_SOURCES := 0
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/Image-manolo.gz-dtb
+ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),)
+FOX_BUILD_FULL_KERNEL_SOURCES := 1
+endif
+
+ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
+TARGET_KERNEL_CONFIG := vince_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/vince
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+else
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/Image.gz-dtb
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/Image-DarkAges.gz-dtb
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/Image-ebbg.gz-dtb
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/zImage-twrp-dtb
+PRODUCT_COPY_FILES += \
+    $(TARGET_PREBUILT_KERNEL):kernel
+endif
 # end DJ9
 
 # Platform
@@ -77,12 +94,13 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # TWRP Configuration
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/twrp.fstab
+#TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/twrp.fstab
+#TW_EXCLUDE_DEFAULT_USB_INIT := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/soc/7000000.ssusb/7000000.dwc3/gadget/lun0/file"
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
@@ -96,3 +114,14 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 # Treble
 BOARD_NEEDS_VENDORIMAGE_SYMLINK := false
 TARGET_COPY_OUT_VENDOR := vendor
+
+###########################
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
+TW_MAX_BRIGHTNESS := 255
+BOARD_PERSISTIMAGE_PARTITION_SIZE := 67108864
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TW_DEFAULT_LANGUAGE := en
+BOARD_SUPPRESS_SECURE_ERASE := true
+TW_IGNORE_MISC_WIPE_DATA := true
+#####
+
