@@ -15,15 +15,7 @@ service sbinqseecomd /sbin/qseecomd
     user root
     group root
     seclabel u:r:recovery:s0
-
-on boot
-    # save battery by switching to interactive once booted
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
     
-
 # Fix for partition Mounting
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
