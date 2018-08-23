@@ -14,9 +14,12 @@
 # limitations under the License.
 #
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# Inherit TWRP device configuration
+$(call inherit-product-if-exists, device/asus/X00TD/twrp_X00TD.mk)
 
-$(call inherit-product, device/asus/X00T/device.mk)
-$(call inherit-product-if-exists, vendor/asus/X00T/device-vendor-X00T.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+PRODUCT_NAME := omni_X00TD
+PRODUCT_BRAND := asus
+PRODUCT_DEVICE := X00TD

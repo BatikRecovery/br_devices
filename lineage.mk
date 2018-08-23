@@ -15,11 +15,11 @@
 #
 
 # Inherit TWRP device configuration
-$(call inherit-product-if-exists, device/asus/X00T/twrp_X00T.mk)
+$(call inherit-product-if-exists, device/asus/X00TD/twrp_X00TD.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_X00T
+PRODUCT_NAME := lineage_X00TD
 PRODUCT_BRAND := asus
-PRODUCT_DEVICE := X00T
+PRODUCT_DEVICE := X00TD

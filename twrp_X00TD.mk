@@ -14,12 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit TWRP device configuration
-$(call inherit-product-if-exists, device/asus/X00T/twrp_X00T.mk)
+# Inherit device configuration
+$(call inherit-product, device/asus/X00TD/aosp_X00TD.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
-PRODUCT_NAME := omni_X00T
-PRODUCT_BRAND := asus
-PRODUCT_DEVICE := X00T
+PRODUCT_MANUFACTURER := asus
+PRODUCT_MODEL := ASUS_X00TD

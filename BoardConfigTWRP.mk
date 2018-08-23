@@ -25,7 +25,7 @@ TW_EXTRA_LANGUAGES := true
 TW_EXCLUDE_SUPERSU := true
 
 # Fix access denied issue
-BOARD_SEPOLICY_DIRS += device/asus/X00T/sepolicy
+BOARD_SEPOLICY_DIRS += device/asus/X00TD/sepolicy
 
 # Fix error using mke2fs
 TW_RECOVERY_ADDITIONAL_RELINK_FILES := \
@@ -33,4 +33,4 @@ TW_RECOVERY_ADDITIONAL_RELINK_FILES := \
 
 # For decrypting /data, we need to hack recovery.img and inject new os and
 # security version
-BOARD_CUSTOM_BOOTIMG_MK := device/asus/X00T/boot.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/asus/X00TD/boot.mk

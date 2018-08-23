@@ -14,8 +14,9 @@
 # limitations under the License.
 #
 
-# Inherit device configuration
-$(call inherit-product, device/asus/X00T/aosp_X00T.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_MANUFACTURER := asus
-PRODUCT_MODEL := ASUS_X00TD
+$(call inherit-product, device/asus/X00TD/device.mk)
+$(call inherit-product-if-exists, vendor/asus/X00TD/device-vendor-X00TD.mk)
