@@ -30,8 +30,8 @@
 /devcfg		emmc	  /dev/block/bootdevice/by-name/devcfg	             flags=backup=1;subpartitionof=/aboot
 
 # Modem backup/restore
-/firmware       vfat      /dev/block/bootdevice/by-name/modem                flags=display="Firmware";backup=0;mounttodecrypt
-/firmware_image emmc      /dev/block/bootdevice/by-name/modem                flags=display="Modem (Image)";backup=1;flashimg=1
+/firmware       vfat      /dev/block/bootdevice/by-name/modem                flags=display="Firmware";backup=0;mounttodecrypt;fsflags=ro
+/modem 		emmc      /dev/block/bootdevice/by-name/modem                flags=display="Modem (Image)";backup=1;flashimg=1
 /dsp		emmc	  /dev/block/bootdevice/by-name/dsp	             flags=backup=1;subpartitionof=/firmware
 /sec       	emmc      /dev/block/bootdevice/by-name/sec                  flags=backup=1;display="Sec"
 #/config	emmc	  /dev/block/bootdevice/by-name/config		     flags=display="OEM";backup=1
