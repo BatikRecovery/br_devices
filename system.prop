@@ -1,0 +1,9 @@
+ro.product.brand=xiaomi
+ro.product.name=beryllium
+ro.product.device=beryllium
+ro.product.mod_device=beryllium_global
+ro.build.product=beryllium
+ro.treble.enabled=true
+sys.usb.controller=a800000.dwc3
+sys.usb.rndis.func.name=rndis_bam
+sys.usb.rmnet.func.name=rmnet_bam
