@@ -25,13 +25,13 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.ugglite_variants.rc
+import init.ugg_variants.rc
 
 on fs
     # Needed to make qseecomd work in recovery
     chmod 0777 /dev/qseecom
     chmod 0664 /dev/ion
-    chown system system /dev/ion
+    chown system system /
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
@@ -47,5 +47,4 @@ service sbinqseecomd /sbin/qseecomd
 on fs
     wait /dev/block/platform/soc/7824900.sdhci
     symlink /dev/block/platform/soc/7824900.sdhci /dev/block/bootdevice
-    mount_all /fstab.qcom
-    swapon_all /fstab.qcom
+    
