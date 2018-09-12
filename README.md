@@ -1,11 +1,6 @@
+TeamWin Recovery Project
 
-
------------------------------------------------------------------------
-* **Source**:- [ https://github.com/TeamWin/android_device_xiaomi_santoni](https://github.com/TeamWin/android_device_xiaomi_santoni)
------------------------------------------------------------------------
-
-
- Xiaomi Redmi 4/4X  (_santoni_)
+Device configuration for Xiaomi Redmi 4[IN]/4X  (_santoni_)
 =====================================================
 
 Basic   | Spec Sheet

@@ -15,7 +15,10 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -32,14 +35,18 @@ PRODUCT_COPY_FILES += \
 # sdcardfs
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true
+    
+# treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.treble.enabled=true
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
-    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+    $(LOCAL_PATH)/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := santoni
 PRODUCT_NAME := full_santoni
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 4
+PRODUCT_MODEL := Redmi 4X
 PRODUCT_MANUFACTURER := Xiaomi

@@ -72,6 +72,8 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # TWRP Configuration
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_INCLUDE_FUSE_EXFAT := true
+TW_INCLUDE_NTFS_3G := true
 TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
@@ -94,6 +96,5 @@ TW_INCLUDE_FUSE_EXFAT := true
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
 
-# Treble
-BOARD_NEEDS_VENDORIMAGE_SYMLINK := false
-TARGET_COPY_OUT_VENDOR := vendor
+# Official
+BR_OFFICIAL := true

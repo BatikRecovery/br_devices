@@ -32,7 +32,10 @@ on fs
     chown system system /dev/ion
 
 on property:ro.crypto.state=encrypted
-    start sbinqseecomd
+    start sbinqseecomd    
+
+#disable dt2w
+    write /proc/touchpanel/double_tap_enable 0
 
 # Separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
 service sbinqseecomd /sbin/qseecomd
@@ -41,3 +44,8 @@ service sbinqseecomd /sbin/qseecomd
     user root
     group root
     seclabel u:r:recovery:s0
+
+#fix
+on fs
+    wait /dev/block/platform/soc/7824900.sdhci
+    symlink /dev/block/platform/soc/7824900.sdhci /dev/block/bootdevice
