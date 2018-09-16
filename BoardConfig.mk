@@ -1,4 +1,5 @@
-TARGET_CRYPTFS_HW_PATH := device/asus/X00TD/cryptfs_hw
+LOCAL_PATH := device/asus/X00TD/
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
@@ -37,15 +38,51 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1 swi
 BOARD_KERNEL_CMDLINE += user_debug=31 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000
-
-TARGET_PREBUILT_KERNEL := device/asus/X00TD/kernel
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_RAMDISK_OFFSET     := 0x01000000
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
 # TARGET_LDPRELOAD := libNimsWrap.so
 
+# Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
--include device/asus/X00TD/BoardConfigTWRP.mk
+# Recovery
+RECOVERY_VARIANT := twrp
+
+# TWRP-Specific
+TW_THEME := portrait_hdpi
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 178
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_INCLUDE_CRYPTO := true
+TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd hwservicemanager keymaster-3-0
+TW_INCLUDE_NTFS_3G := true
+TW_NO_EXFAT_FUSE := true
+
+# Correct time
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TARGET_RECOVERY_DEVICE_MODULE := tzdata
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/usr/share/zoneinfo/tzdata
+
+# Remove cursor
+TW_INPUT_BLACKLIST := "hbtp_vm"
+
+# Extra configurations
+TW_EXTRA_LANGUAGES := true
+TW_EXCLUDE_SUPERSU := true
+
+# Fix access denied issue
+BOARD_SEPOLICY_DIRS += device/asus/X00TD/sepolicy
+
+# Fix error using mke2fs
+TW_RECOVERY_ADDITIONAL_RELINK_FILES := \
+    $(OUT)/system/lib64/libext2_misc.so
+
+# For decrypting /data, we need to hack recovery.img and inject new os and
+# security version
+BOARD_CUSTOM_BOOTIMG_MK := device/asus/X00TD/boot.mk
 
 # Official
 BR_OFFICIAL := true

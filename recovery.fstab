@@ -1,8 +1,8 @@
 # mount_point   fstype    device                                             flags
 /cache          ext4      /dev/block/bootdevice/by-name/cache                flags=display="Cache";wipeingui;backup=0
 /system         ext4      /dev/block/bootdevice/by-name/system
-/vendor         ext4      /dev/block/bootdevice/by-name/vendor               flags=display="Vendor";mounttodecrypt;backup=1;wipeingui
-/data           ext4      /dev/block/bootdevice/by-name/userdata             flags=fsflags="inline_xattr,nosuid,nodev,noatime,nodiratime,discard";encryptable=footer
+/vendor         ext4      /dev/block/bootdevice/by-name/vendor               flags=display="vendor";backup=1;wipeingui
+/data           ext4      /dev/block/bootdevice/by-name/userdata             flags=encryptable=footer;fileencryption=ice:aes-256-heh
 /system_image   emmc      /dev/block/bootdevice/by-name/system               flags=flashimg=1;backup=0
 /vendor_image   emmc      /dev/block/bootdevice/by-name/vendor               flags=flashimg=1;backup=0
 /recovery       emmc      /dev/block/bootdevice/by-name/recovery             flags=display="Recovery";backup=1
