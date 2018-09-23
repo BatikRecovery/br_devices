@@ -10,6 +10,7 @@
 /system         ext4      /dev/block/bootdevice/by-name/system             flags=display="System";backup=1
 /system_image   emmc      /dev/block/bootdevice/by-name/system             flags=backup=1;flashimg
 /data           ext4      /dev/block/bootdevice/by-name/userdata           flags=encryptable=footer
+/dev/block/bootdevice/by-name/userdata /data f2fs nosuid,nodev,noatime,inline_xattr,data_flush	wait,check,encryptable=footer,formattable
 /modem_image    emmc      /dev/block/bootdevice/by-name/modem              flags=backup=1;display="Modem";flashimg
 /vendor         ext4      /dev/block/bootdevice/by-name/cust               flags=display="Cust/Vendor";backup=1;wipeingui
 /vendor_image	emmc	  /dev/block/bootdevice/by-name/cust			   flags=display="Cust/Vendor Image";backup=1
