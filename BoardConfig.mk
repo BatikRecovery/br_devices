@@ -23,11 +23,11 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Kernel
 #TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8956
-#TARGET_KERNEL_CONFIG := twrp_defconfig
+#TARGET_KERNEL_CONFIG := lineageos_kenzo_defconfig
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 
-TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/prebuilts/Image.gz-dtb
 
 # Boot image
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk ramoops_memreserve=4M androidboot.selinux=permissive
