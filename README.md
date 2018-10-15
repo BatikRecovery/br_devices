@@ -1,22 +1,21 @@
 TeamWin Recovery Project
 
-Device configuration for Xiaomi Redmi 3 (ido)
+Device configuration for Smartfren Andromax G36C1H (rendang)
 =====================================
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | Quad-core 1.5 GHz Cortex-A53 & quad-core 1.2 GHz Cortex-A53
-CHIPSET | Qualcomm MSM8939v2 Snapdragon 616
-GPU     | Adreno 405
-Memory  | 2 GB
-Shipped Android Version | Android 5.1.1 with MIUI 7.1
-Storage | 16 GB
-MicroSD | Up to 128 GB (Hybrid)
-Battery | 4100 mAh (non-removable)
-Dimensions | 139.3 x 69.6 x 8.5 mm
-Display | 720 x 1280 pixels, 5.0" IPS
-Rear Camera  | 13.0 MP, LED flash
-Front Camera | 5.0 MP
-Release Date | January 2016
+CPU     | Quad-core 1.2 GHz Cortex-A53
+CHIPSET | Qualcomm MSM8916 Snapdragon 410
+GPU     | Adreno 306
+Memory  | 1 GB
+Shipped Android Version | Android 5.1.1 with CyanogenOS 12.1
+Storage | 8 GB
+Battery | 2000 mAh (removable)
+Display | 480 x 854 pixels, 4.5" IPS
+Rear Camera  | 5MP, up to 2592 x 1944-pixel pictures camera with LED flash
+Front Camera | 2MP up to 1600 x 1200-pixel pictures
+Sensors	     | Accelerometer, Proximity, Ambient light, Compass
+Release Date | July 2015
 
-![Xiaomi Redmi 3](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-3-0.jpg "Xiaomi Redmi 3")
+![Smartfren Andromax Q](https://www.smartfren.com/assets/img/product/img-55.png "Smartfren Andromax Q")
