@@ -30,8 +30,8 @@ PRODUCT_PACKAGES += \
     charger
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ido
-PRODUCT_NAME := full_ido
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 3
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_DEVICE := rendang
+PRODUCT_NAME := full_rendang
+PRODUCT_BRAND := Smartfren
+PRODUCT_MODEL := Andromax G36C1H
+PRODUCT_MANUFACTURER := Haier

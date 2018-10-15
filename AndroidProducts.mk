@@ -14,5 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_ido.mk \
-	$(LOCAL_DIR)/full_ido.mk
+	$(LOCAL_DIR)/omni_rendang.mk \
+	$(LOCAL_DIR)/full_rendang.mk

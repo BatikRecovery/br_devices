@@ -16,9 +16,9 @@
 # Product-specific compile-time definitions.
 #
 
-LOCAL_PATH := device/xiaomi/ido
+LOCAL_PATH := device/smartfren/rendang
 
-TARGET_BOARD_VENDOR := xiaomi
+TARGET_BOARD_VENDOR := smartfren
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
