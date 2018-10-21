@@ -39,7 +39,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno405
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
