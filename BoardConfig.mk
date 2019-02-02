@@ -111,3 +111,5 @@ TW_INCLUDE_FUSE_EXFAT := true
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
 
+# Official
+BR_OFFICIAL := true
