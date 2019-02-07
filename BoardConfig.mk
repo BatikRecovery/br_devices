@@ -88,6 +88,7 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Recovery
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_HAS_LARGE_FILESYSTEM := true
+AB_OTA_UPDATER := false
 
 # Recovery blobs
 TARGET_RECOVERY_DEVICE_MODULES := libbinder libgui libui libEGL libGLESv2 libprotobuf-cpp-lite libsync
