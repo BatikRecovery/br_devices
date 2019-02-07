@@ -75,3 +75,6 @@ TW_THEME := portrait_hdpi
 
 # Official
 BR_OFFICIAL := true
+
+# Recovery
+AB_OTA_UPDATER := false
