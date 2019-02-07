@@ -66,6 +66,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS := true
 TW_INCLUDE_NTFS_3G := true
+AB_OTA_UPDATER := false
 
 # TWRP Configs
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
