@@ -60,6 +60,7 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
+AB_OTA_UPDATER := false
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
