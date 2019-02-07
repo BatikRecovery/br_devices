@@ -49,6 +49,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 # Recovery
 RECOVERY_VARIANT := twrp
+AB_OTA_UPDATER := false
 
 # TWRP-Specific
 TW_THEME := portrait_hdpi
