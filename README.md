@@ -1,1 +1,1 @@
-For building TWRP for Xiaomi MI 8 LITE
+For building TWRP for Xiaomi Redmi Note 6 Pro
