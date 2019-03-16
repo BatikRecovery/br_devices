@@ -14,7 +14,7 @@
 /vendor_image   emmc    /dev/block/bootdevice/by-name/vendor             
 /cust           ext4    /dev/block/bootdevice/by-name/cust                    flags=display="Cust";backup=1;wipeingui
 /misc           emmc    /dev/block/bootdevice/by-name/misc                    flags=display="Misc"
-/persist        ext4    /dev/block/bootdevice/by-name/persist                 flags=display="Persist"
+/persist        ext4    /dev/block/bootdevice/by-name/persist                 flags=display="Persist";backup=1;flashimg=1
 /splash         emmc    /dev/block/bootdevice/by-name/splash                  flags=display="Boot Logo";backup=1;flashimg=1
 
 /modem          emmc    /dev/block/bootdevice/by-name/modem                   flags=backup=1;display="Modem"
