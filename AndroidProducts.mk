@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_rolex.mk \
-	$(LOCAL_DIR)/full_rolex.mk
+	$(LOCAL_DIR)/omni_riva.mk \
+	$(LOCAL_DIR)/full_riva.mk

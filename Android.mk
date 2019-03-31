@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE), rolex)
+ifeq ($(TARGET_DEVICE), riva)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
