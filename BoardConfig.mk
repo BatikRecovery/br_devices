@@ -95,3 +95,6 @@ TARGET_PROVIDES_KEYMASTER := true
 
 # Qcom Hardware
 BOARD_USES_QCOM_HARDWARE := true
+
+# Official
+BR_OFFICIAL := true
