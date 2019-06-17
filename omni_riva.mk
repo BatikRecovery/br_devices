@@ -22,4 +22,7 @@ $(call inherit-product, device/xiaomi/riva/full_riva.mk)
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Allow missing dependenciea
+ALLOW_MISSING_DEPENDENCIES=true
+
 PRODUCT_NAME := omni_riva
