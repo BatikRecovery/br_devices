@@ -20,7 +20,7 @@ $(call inherit-product, vendor/omni/config/gsm.mk)
 $(call inherit-product, device/xiaomi/riva/full_riva.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/batik/config/common.mk)
 
 # Allow missing dependenciea
 ALLOW_MISSING_DEPENDENCIES=true
