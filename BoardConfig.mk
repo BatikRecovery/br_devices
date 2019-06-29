@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/riva
+LOCAL_PATH := device/xiaomi/rolex
 
 # Architecture
 TARGET_ARCH := arm64

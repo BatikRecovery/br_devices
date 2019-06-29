@@ -14,6 +14,14 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_rolex.mk \
-	$(LOCAL_DIR)/full_rolex.mk
+$(call inherit-product, build/target/product/embedded.mk)
+
+$(call inherit-product, device/xiaomi/rolex/full_rolex.mk)
+
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/batik/config/common.mk)
+
+# Allow missing dependenciea
+ALLOW_MISSING_DEPENDENCIES=true
+
+PRODUCT_NAME := omni_rolex
