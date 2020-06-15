@@ -40,7 +40,7 @@ TARGET_USES_UEFI := true
 
 # Platform
 TARGET_BOARD_PLATFORM := sm6125
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 androidboot.usbcontroller=a600000.dwc3 firmware_class.path=/vendor/firmware_mnt/image earlycon=msm_geni_serial,0x880000 loop.max_part=7 cgroup.memory=nokmem,nosocket androidboot.selinux=permissive
@@ -119,8 +119,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
-TW_Y_OFFSET := 80
-TW_H_OFFSET := -80
+TW_Y_OFFSET := 43
+TW_H_OFFSET := -43
 TW_NO_SCREEN_BLANK := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
