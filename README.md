@@ -8,17 +8,15 @@ TWRP device tree for Realme 5
 Works:
 
 - ADB
-- Decryption of /data
+- Decryption of /data (Needs more testing)
 - Screen brightness settings
 - Correct screenshot color
 - MTP
 - Flashing (opengapps, roms, images and so on)
 - Backup/Restore (Needs more testing)
 - USB OTG
-
-TO-DO:
-
 - Vibration support
+- External sdcard
 
 ## Compile
 
@@ -46,8 +44,10 @@ mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp
 To test it:
 
 ```
-fastboot boot out/target/product/RMX1911/recovery.img
+fastboot flash recovery out/target/product/RMX1911/recovery.img
 ```
+
+Then reboot to recovery
 
 ## Other Sources
 
