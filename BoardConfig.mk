@@ -133,3 +133,6 @@ TW_SKIP_COMPATIBILITY_CHECK := true
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
+
+#Official
+BR_OFFICIAL := true
